@@ -64,3 +64,27 @@ A copy of this edited file is `tstf-version.ado` in this folder. Make sure to re
 ## 4. Parsing the generic error
 
 The error message if something goes wrong is particularly unhelpful. If you look in the .ado file, any problem that doesn't return the coefficients file shows "the R script did not run, see what's wrong in the file `tstf_to_r.R`" as the error.
+
+The first step is to see if Stata and R created the data files they use. If you look in your working directory and see data_tstf.dta but not `_tstf_b.dta`, `_tstf_stats.dta`, or `_tstf_V.dta` there was an error in R before it saved the data. Open the `tstf_to_r.R` file in your R interpreter and run it line-by-line. It might be that the required packages didn't install properly or you need to update R.
+
+## 5. Errors after R
+
+If R generates the new Stata datasets (`_tstf_b.dta`, `_tstf_stats.dta`, and `_tstf_V.dta`) but hits an error after loading them, you can run the `tstf.ado` file line-by-line until you find the error.
+
+One problem I encountered was how R handles converting factors. If you get a string error when you try to decode the `names` variable in  `_tstf_b.dta`, R might have encoded `names` as a string rather than an int (as is assumed by the code). Replace line 275:
+
+Before:
+
+```Stata
+qui decode names, gen(snames)
+```
+
+After:
+
+```Stata
+qui rename names snames
+```
+
+## 6. Other
+
+If you encounter errors using TSTF in Stata, let me know and I can update this guide!
