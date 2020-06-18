@@ -41,11 +41,9 @@ tstf lograte if inrange(time, 625, 691), smooth int(676) arima(1,1,1) sarima(1,0
 
 If this works, fantastic! You can use your own tstf data and get moving. Otherwise...
 
-## 3. Troubleshooting
+## 3. Version error
 
-### a. Version error
-
-If you are running a version of Stata that is before Stata 14, the saveold command on line 210 of `tstf.ado` (on Windows, located at `C:/ado/plus/t`) will not work and you will get a version error. The original `tstf.ado` file can be edited so it works with pre-14 Stata. Just get rid of the version argument:
+If you are running a version of Stata that is before Stata 14, the saveold command on line 210 of `tstf.ado` (on Windows, located at `C:/ado/plus/t`) will not work and you will give a version error. The original `tstf.ado` file can be edited so it works with pre-14 Stata. Just get rid of the version argument:
 
 Before:
 
@@ -63,6 +61,6 @@ Save the `tstf.ado` file and run the test code again. For extra safety, create a
 
 A copy of this edited file is `tstf-version.ado` in this folder. Make sure to restart Stata if you modify the package before trying to run the commands in part 1.
 
-### b. Parsing the generic error
+## 4. Parsing the generic error
 
-The error message if something goes wrong 
+The error message if something goes wrong is particularly unhelpful. If you look in the .ado file, any problem that doesn't return the coefficients file shows "the R script did not run, see what's wrong in the file `tstf_to_r.R`" as the error.
