@@ -59,7 +59,7 @@ quietly saveold `"data_tstf"' , replace nolabel
 
 Save the `tstf.ado` file and run the test code again. For extra safety, create a backup version of the `tstf.ado` file (`tstf-bkup.ado`) before you make any edits.
 
-A copy of this edited file is `tstf-version.ado` in this folder. Make sure to restart Stata if you modify the package before trying to run the commands in part 1.
+A copy of this edited file is `tstf-version.ado` in this folder. Make sure to restart Stata if you modify the package before trying to run the commands in part 2.
 
 ## 4. Parsing the generic error
 
@@ -84,6 +84,10 @@ After:
 ```Stata
 qui rename names snames
 ```
+
+Save the `tstf.ado` file and run the test code again. For extra safety, create a backup version of the `tstf.ado` file (`tstf-bkup.ado`) before you make any edits.
+
+A copy of this edited file is `tstf-string.ado` in this folder. Make sure to restart Stata if you modify the package before trying to run the commands in part 2.
 
 ## 6. Other
 
