@@ -101,12 +101,12 @@ ps -aux | grep stata
 ```
 
 Breaking it down:
-  1. ps: List currently running processes
-  2. u: Provide detailed information about processes
-  3. a: List processes of all users
-  4. x: List processes in the background
-  5. |: A pipe that takes the output of the left side and uses it as input to the function on the right side (grep here)
-  5. grep: search the piped in text for the keyword (stata here)
+  1. `ps`: List currently running processes
+  2. `u`: Provide detailed information about processes
+  3. `a`: List processes of all users
+  4. `x`: List processes in the background
+  5. `|`: A pipe that takes the output of the left side and uses it as input to the function on the right side (grep here)
+  5. `grep`: search the piped in text for the keyword (stata here)
   
 Once you have the process id, you can kill it and end your job early:
 
