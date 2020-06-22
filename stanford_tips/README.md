@@ -22,13 +22,16 @@ When you SSH, you will have to enter your password and it might prompt you to ac
 
 Alternatively, you can install an SSH client like [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/) or [SecureCRT](https://uit.stanford.edu/software/securecrt).
 
+
+## 2. Uploading/Downloading Files
+
 TODO: ADDING DATA
 
-## 2. Basic Unix
+## 3. Basic Unix
 
-TODO
+TODO: Navigating, copy, remove etc.
 
-## 3. Stata
+## 4. Stata
 
 FarmShare has a variety of different software packages available. To list them all:
 
@@ -63,7 +66,7 @@ module load stata-se
 xstata
 ```
 
-## 4. Running batch jobs
+## 5. Running batch jobs
 
 If you want to run a Stata do file that will take a while to run, you have the option to run Stata (as described above) and run a do file in the same way you would on your home computer:
 
