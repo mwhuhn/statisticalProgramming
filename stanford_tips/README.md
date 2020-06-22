@@ -22,6 +22,8 @@ When you SSH, you will have to enter your password and it might prompt you to ac
 
 Alternatively, you can install an SSH client like [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/) or [SecureCRT](https://uit.stanford.edu/software/securecrt).
 
+TODO: ADDING DATA
+
 ## 2. Basic Unix
 
 TODO
