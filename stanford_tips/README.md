@@ -91,7 +91,7 @@ Breaking it down:
   4. `stata -b do my_do_file.do`: Your Stata batch job
   5. `&`: Run the command in the background
 
-Before you exit the FarmShare session, use `ps` to view the process id and name. You should also write down which FarmShare machine you are on. The process runs on a specific machine so if you want to kill the process later, you have to log back in to the specific machine.
+Before you logout the FarmShare session, use `ps` to view the process id and name. You should also write down which FarmShare machine you are on. The process runs on a specific machine so if you want to kill the process later, you have to log back in to the specific machine.
 
 There are a few ways of locating your process if you haven't written it down, including with your username:
 
@@ -118,3 +118,11 @@ Once you have the process id, you can kill it and end your job early:
 ```bash
 kill PID
 ```
+
+Make sure to logout and not just close the session as this might kill your process. Just run:
+
+```bash
+logout
+```
+
+before you close.
